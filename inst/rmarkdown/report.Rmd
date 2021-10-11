@@ -14,8 +14,9 @@ output:
     number_sections: true
 params: 
  Rdatafile: NA
- out_dir: out_dir
 ---
+
+This report is just an toy example to see if I can create a package that has (1) an embedded png image, (2) a embedded data set to use internal, (3) can generate an Rdata object generated outside the report, but accessed by it to generate figures and tables. 
 
 
 ## load packages
@@ -37,20 +38,14 @@ load(params$Rdatafile)
 
 ## A picture of daisy built into package
 
-```{r}
+```{r , out.width = "200px"}
 f = system.file("rmarkdown", package="exrender")
 pic = file.path( f, "skeleton/daisy.png")
 knitr::include_graphics(pic)
 ```
 
 
-
-
-## plot cars data
-
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+## print a cars data summary
 
 ```{r cars}
 message( "Summary of cars" )
@@ -59,27 +54,28 @@ summary(cars)
 
 ## pressure plot
 
-You can also embed plots, for example:
+A random plot of some 
 
 ```{r pressure, echo=FALSE}
-message( "Plot of pressure" )
 plot(pressure)
 ```
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
 
-## plot the ggplot object I made with the make_some_data() function
+## plot the ggplot object
+
+We made this image in the make_some_data() function and passed it to the report as a paramater that needed to be loaded.
 
 ```{r}
-message("Plot of iris PCA")
 my_plot
 ```
 
-## print the head of the ng_anno data set I placed into the packge
+## make a table 
+
+A table of the first few rows of the embedded data set 'ng_anno'
 
 ```{r}
-message("access the internal data ng_anno")
-head(ng_anno)
+knitr::kable(ng_anno[1:4,])
 ```
 
 
