@@ -14,6 +14,7 @@ output:
     number_sections: true
 params: 
  Rdatafile: NA
+ out_dir: out_dir
 ---
 
 This report is just an toy example to see if I can create a package that has (1) an embedded png image, (2) a embedded data set to use internal, (3) can generate an Rdata object generated outside the report, but accessed by it to generate figures and tables. 
