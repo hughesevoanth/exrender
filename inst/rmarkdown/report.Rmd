@@ -18,13 +18,24 @@ params:
 ---
 
 
-```{r setup, include=FALSE}
+## load packages
+
+```{r setup, include=TRUE}
 suppressPackageStartupMessages(library(knitr))
 suppressPackageStartupMessages(library(tidyverse))
 
 knitr::opts_chunk$set(warning=FALSE, echo=TRUE, message=FALSE, 
                results='asis', fig.width=6, fig.height=6 )
 ```
+
+## load Rdata file for report to us
+
+```{r}
+load(params$Rdatafile)
+```
+
+
+## A picture of daisy built into package
 
 ```{r}
 f = system.file("rmarkdown", package="exrender")
@@ -33,13 +44,9 @@ knitr::include_graphics(pic)
 ```
 
 
-```{r}
-# load(params$Rdatafile)
-# out_dir = params$out_dir
-```
 
 
-## Test R package report
+## plot cars data
 
 This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
 
@@ -50,7 +57,7 @@ message( "Summary of cars" )
 summary(cars)
 ```
 
-## Including Plots
+## pressure plot
 
 You can also embed plots, for example:
 
@@ -61,15 +68,18 @@ plot(pressure)
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
 
+## plot the ggplot object I made with the make_some_data() function
 
 ```{r}
 message("Plot of iris PCA")
-# my_plot
+my_plot
 ```
+
+## print the head of the ng_anno data set I placed into the packge
 
 ```{r}
 message("access the internal data ng_anno")
-# head(ng_anno)
+head(ng_anno)
 ```
 
 
