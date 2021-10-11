@@ -2,19 +2,21 @@ Package: exrender
 Version: 0.0.1
 Date: 2021-10-08
 Title: Example pdf rendering
-Description: An R package to test the rendering a pdf
+Description: An R package to test the rendering a pdf.
 Author: David A Hughes <hughes.evoanth@gmail.com>
 Maintainer: David A Hughes <hughes.evoanth@gmail.com>
 RoxygenNote: 7.1.2
 Encoding: UTF-8
-License: CC0
+License: MIT + file LICENSE
 LazyData: true
 Imports:
-	ggplot2,
-	datasets,
-	RColorBrewer,
-	tinytex,
-	dplyr, 
-	magrittr,
-	stats
+    datasets,
+    dplyr,
+    ggplot2,
+    knitr,
+    magrittr,
+    rlang,
+    rmarkdown,
+    stats,
+    tinytex
 Depends: R (>= 3.3)
