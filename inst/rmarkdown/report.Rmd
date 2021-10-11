@@ -17,6 +17,9 @@ params:
  out_dir: out_dir
 ---
 
+
+## what is this?
+
 This report is just an toy example to see if I can create a package that has (1) an embedded png image, (2) a embedded data set to use internal, (3) can generate an Rdata object generated outside the report, but accessed by it to generate figures and tables. 
 
 
@@ -57,17 +60,17 @@ summary(cars)
 
 A random plot of some 
 
-```{r pressure, echo=FALSE}
+```{r pressure, echo=TRUE, fig.width = 4, fig.height = 3.5}
 plot(pressure)
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
 
 ## plot the ggplot object
 
 We made this image in the make_some_data() function and passed it to the report as a paramater that needed to be loaded.
 
-```{r}
+```{r, fig.width = 8, fig.height = 6}
 my_plot
 ```
 
