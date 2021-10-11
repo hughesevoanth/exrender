@@ -51,8 +51,7 @@ knitr::include_graphics(pic)
 ## print a cars data summary
 
 ```{r cars}
-message( "Summary of cars" )
-summary(cars)
+knitr::kable(summary(cars))
 ```
 
 ## pressure plot
