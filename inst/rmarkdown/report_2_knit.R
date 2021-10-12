@@ -1,7 +1,10 @@
 # Test Report Render
 
 by: David A Hughes
-date: **`r format(Sys.time(), '%d %B, %Y')`**
+
+date: `r format(Sys.time(), '%d %B, %Y')`
+
+
 
 ```{r setup, include=FALSE}
 suppressPackageStartupMessages(library(knitr))
@@ -11,12 +14,6 @@ knitr::opts_chunk$set(warning=FALSE, echo=TRUE, message=FALSE,
                results='asis', fig.width=6, fig.height=6 )
 ```
 
-## Load the Rdata file
-
-```{r load_Rdata}
-# load("GeneratedData.Rdata")
-```
----
 
 ## A picture of daisy built into package
 
@@ -25,7 +22,6 @@ f = system.file("rmarkdown", package="exrender")
 pic = file.path( f, "skeleton/daisy.png")
 knitr::include_graphics(pic)
 ```
----
 
 ## plot the ggplot object
 
