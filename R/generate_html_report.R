@@ -13,11 +13,15 @@
 generate_html_report = function(full_path_2_Rdatafile = "GeneratedData.Rdata", dir_4_report = ".", path_2_Rmd_template = system.file("rmarkdown", package="exrender") ){
    
    ## load R data file to environment
+   message("Loading the R data file")
    load(full_path_2_Rdatafile)
 
    ## knit report
-   knit2html( file.path( path_2_Rmd_template,"report_2_knit.R"),
-    output= paste0(dir_4_report, "Example_Report.html") )
+   message("knit the report to html")
+   knit2html( 
+      input = file.path( path_2_Rmd_template, "report_2_knit.R"),
+      output = paste0(dir_4_report, "Example_Report.html") 
+      )
   
 
 }
