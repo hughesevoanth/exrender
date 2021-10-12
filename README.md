@@ -12,8 +12,17 @@ This repo contains a few functions to test the rendering of a pdf with an embede
 
 	devtools::install_github("hughesevoanth/exrender")
 
+## pdflatex is required to generate the pdf
 
+To have the pdf report generated you must have a latex to pdf engine installed. To check if it already available on your system run:
 
+	Sys.which('pdflatex')
+
+To determine which version you have run:
+
+	pdflatex -v
+	
+This is a pdf engine from pdfTeX (https://www.tug.org/applications/pdftex/) written by Han The Thanh. It is distributed in TeX Live (https://www.tug.org/texlive/) and MacTex (https://www.tug.org/mactex/) or MiKTeX (https://miktex.org). If you find that pdflatex is not available on your system do install it via one of the referenced links.
 
 ### Example code to run the package
 
