@@ -12,9 +12,9 @@ This repo contains a few functions to test the rendering of a pdf with an embede
 
 	devtools::install_github("hughesevoanth/exrender")
 
-## pdflatex is required to generate the pdf
+## pdflatex is required to generate the pdf outside the RStudio IDE
 
-To have the pdf report generated you must have a latex to pdf engine installed. To check if it already available on your system run:
+To have the pdf report generated - in a terminal or HPC - you must have a latex to pdf engine installed. To check if it already available on your system run:
 
 	Sys.which('pdflatex')
 
