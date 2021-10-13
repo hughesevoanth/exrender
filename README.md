@@ -12,7 +12,7 @@ This repo contains a few functions to test the rendering of a pdf with an embede
 
 	devtools::install_github("hughesevoanth/exrender")
 
-## pdflatex is required to generate the pdf outside the RStudio IDE
+## pdflatex and pandoc are required to generate the pdf outside the RStudio IDE
 
 To have the pdf report generated - in a terminal or HPC - you must have a latex to pdf engine installed. To check if it already available on your system run:
 
@@ -23,6 +23,14 @@ To determine which version you have run:
 	pdflatex -v
 	
 This is a pdf engine from pdfTeX (https://www.tug.org/applications/pdftex/) written by Han The Thanh. It is distributed in TeX Live (https://www.tug.org/texlive/) and MacTex (https://www.tug.org/mactex/) or MiKTeX (https://miktex.org). If you find that pdflatex is not available on your system do install it via one of the referenced links.
+
+You will also need an instace of pandoc installed
+
+	https://pandoc.org/installing.html
+	
+### Alternatively,
+
+You can run everything inside the **Rstudio IDE** and everything should run a bit more smoothly. This is because Rstudio has everything it need to turn Rmarkdwon files into html or pdfs built in. 
 
 ### Example code to run the package
 
