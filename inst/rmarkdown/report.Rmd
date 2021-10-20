@@ -81,5 +81,10 @@ A table of the first few rows of the embedded data set 'ng_anno'
 knitr::kable(ng_anno[1:4,])
 ```
 
+```{r}
+x = "my name is moose"
+```
+
+Some in line R code: `r x`
 
 
