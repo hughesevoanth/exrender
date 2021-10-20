@@ -40,3 +40,11 @@ knitr::kable(ng_anno[1:4,])
 ```
 
 
+```{r}
+x = "my name is moose"
+```
+
+Some in line R code: `r x`
+
+
+
